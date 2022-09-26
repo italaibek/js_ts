@@ -9,9 +9,19 @@ const personalMovieDB = {
 };
 
 for (let i = 0; i < 2; i++) {
-    const a = prompt("Один из последних просмотренных фильмов?","");
+    const a = prompt("Один из последних просмотренных фильмов?", "");
     const b = prompt("На сколько оцените его?");
-    personalMovieDB.movies[a] = b;
-    
+
+    if (a != null && b != null && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('Done');
+    }
+    else{
+        console.log('Error');
+        i--;
+    }
+
+
+
 }
 console.log(personalMovieDB);
