@@ -36,15 +36,12 @@ const personalMovieDB = {
         console.log("Произошла ошибка");
     }
 },
-};
-
-function showMyDB(hidden) {
+showMyDB:function(hidden) {
     if (!hidden) {
         console.log(personalMovieDB);
     }
-}
-
-showMyDB(personalMovieDB.privat);
+},
+};
 
 function writeYourGenres() {
     for (let i = 1; i <= 3; i++) {
