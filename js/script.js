@@ -1,12 +1,6 @@
 let numberOfFilms;
 
-function start() {
-    numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
-
-    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-        numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
-    }
-}
+function 
 
 start();
 
@@ -15,7 +9,15 @@ const personalMovieDB = {
     movies: {},
     actors: {},
     genres: [],
-    privat: false
+    privat: false,
+    start:function() {
+        numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+    
+        while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+            numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+        }
+    },
+    
 };
 
 function rememberMyFilms() {
