@@ -25,10 +25,7 @@ const personalMovieDB = {
             }
         }
     },    
-    
-};
-
-function detectPersonalLevel() {
+    detectPersonalLevel:function() {
     if (personalMovieDB.count < 10) {
         console.log("Просмотрено довольно мало фильмов");
     } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
@@ -38,9 +35,8 @@ function detectPersonalLevel() {
     } else {
         console.log("Произошла ошибка");
     }
-}
-
-// detectPersonalLevel();
+},
+};
 
 function showMyDB(hidden) {
     if (!hidden) {
